@@ -40,11 +40,9 @@ public class Playermovement : MonoBehaviour
         Vector3 pos = transform.position;
         pos.z = 0;
         transform.position = pos;
-
         playerMoving = false;
 
-        if (!attacking)
-        {
+      
             if (Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
             {
 
@@ -70,7 +68,7 @@ public class Playermovement : MonoBehaviour
             {
                 myBody.velocity = new Vector2(myBody.velocity.x, 0f);
             }
-        }
+        
 
         anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
         anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
