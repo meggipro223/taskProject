@@ -21,6 +21,13 @@ public class ItemPanel : MonoBehaviour
         if (collision.gameObject.name == "Player")
         {
             itemPanel.SetActive(true);
+            Time.timeScale = 0f;
         }
+    }
+
+    public void ExitBtn()
+    {
+        itemPanel.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
