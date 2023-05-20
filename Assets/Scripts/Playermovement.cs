@@ -71,6 +71,12 @@ public class Playermovement : MonoBehaviour
                 myBody.velocity = new Vector2(myBody.velocity.x, 0f);
             }
         }
+
+        anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
+        anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
+        anim.SetBool("PlayerMoving", playerMoving);
+        anim.SetFloat("LastMoveX", lastMove.x);
+        anim.SetFloat("LastMoveY", lastMove.y);
     }
 }
 
