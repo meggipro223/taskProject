@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class ShopManager : MonoBehaviour
 {
 
     public int[,] shopItems = new int[5, 5];
     public float coins;
-    public Text coinsText;
+    public TextMeshProUGUI coinsText;
 
     // Start is called before the first frame update
     void Start()
