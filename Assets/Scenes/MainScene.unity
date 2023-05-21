@@ -1371,7 +1371,7 @@ GameObject:
   - component: {fileID: 427483762}
   - component: {fileID: 427483761}
   - component: {fileID: 427483760}
-  - component: {fileID: 427483759}
+  - component: {fileID: 427483763}
   m_Layer: 5
   m_Name: Item1
   m_TagString: Untagged
@@ -1402,22 +1402,6 @@ RectTransform:
   m_AnchoredPosition: {x: 80, y: -195.1}
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &427483759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 427483757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1d8b3bde5f270e48981338f98f53db9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 1
-  priceText: {fileID: 619260172}
-  quantityText: {fileID: 1273291152}
-  shopManager: {fileID: 456723832}
 --- !u!114 &427483760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1462,9 +1446,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 456723833}
-        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: Buy
+      - m_Target: {fileID: 1279108281}
+        m_TargetAssemblyTypeName: SellManager, Assembly-CSharp
+        m_MethodName: Sell
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1512,6 +1496,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427483757}
   m_CullTransparentMesh: 1
+--- !u!114 &427483763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427483757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75aeb377630cc1e47a1e318783332551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sellItemId: 1
+  priceText: {fileID: 619260172}
+  quantityText: {fileID: 1273291152}
+  sellManager: {fileID: 1279108280}
 --- !u!1 &430146592
 GameObject:
   m_ObjectHideFlags: 0
@@ -2626,7 +2626,7 @@ GameObject:
   - component: {fileID: 753019280}
   - component: {fileID: 753019279}
   - component: {fileID: 753019278}
-  - component: {fileID: 753019277}
+  - component: {fileID: 753019281}
   m_Layer: 5
   m_Name: Item2
   m_TagString: Untagged
@@ -2657,22 +2657,6 @@ RectTransform:
   m_AnchoredPosition: {x: 267, y: -195.1}
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &753019277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 753019275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1d8b3bde5f270e48981338f98f53db9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 2
-  priceText: {fileID: 674818893}
-  quantityText: {fileID: 312943818}
-  shopManager: {fileID: 456723832}
 --- !u!114 &753019278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2717,9 +2701,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 456723833}
-        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: Buy
+      - m_Target: {fileID: 1279108281}
+        m_TargetAssemblyTypeName: SellManager, Assembly-CSharp
+        m_MethodName: Sell
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2767,6 +2751,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753019275}
   m_CullTransparentMesh: 1
+--- !u!114 &753019281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753019275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75aeb377630cc1e47a1e318783332551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sellItemId: 2
+  priceText: {fileID: 674818893}
+  quantityText: {fileID: 312943818}
+  sellManager: {fileID: 1279108280}
 --- !u!1 &819580488
 GameObject:
   m_ObjectHideFlags: 0
@@ -4396,7 +4396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082757183f4079b4b8a4f159bc6b446c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 100
+  sellCoins: 100
   coinsText: {fileID: 1183506617}
 --- !u!4 &1279108282
 Transform:
