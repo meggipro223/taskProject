@@ -7,13 +7,15 @@ using UnityEngine.EventSystems;
 public class SellManager : MonoBehaviour
 {
     public int[,] shopItems = new int[5, 5];
-    public float sellCoins;
     public TextMeshProUGUI coinsText;
+    //public ShopManager shopManagerIntance;
+    public CoinManager coinsManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        coinsText.text = "Coins:" + sellCoins.ToString();
+       // shopManagerIntance = GetComponent<ShopManager>();
+        coinsText.text = "Coins:" + coinsManager.coins.ToString();
 
         //id
         shopItems[1, 1] = 1;
@@ -32,12 +34,12 @@ public class SellManager : MonoBehaviour
     public void Sell()
     {
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
-        if (sellCoins >= shopItems[2, ButtonRef.GetComponent<SellButtonInfo>().sellItemId])
+        if (coinsManager.coins >= shopItems[2, ButtonRef.GetComponent<SellButtonInfo>().sellItemId])
         {
 
-            sellCoins += shopItems[2, ButtonRef.GetComponent<SellButtonInfo>().sellItemId];
+            coinsManager.coins += shopItems[2, ButtonRef.GetComponent<SellButtonInfo>().sellItemId];
             shopItems[3, ButtonRef.GetComponent<SellButtonInfo>().sellItemId]++;
-            coinsText.text = "Coins:" + sellCoins.ToString();
+            coinsText.text = "Coins:" + coinsManager.coins.ToString();
             ButtonRef.GetComponent<SellButtonInfo>().quantityText.text = shopItems[3, ButtonRef.GetComponent<SellButtonInfo>().sellItemId].ToString();
 
         }

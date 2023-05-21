@@ -9,13 +9,14 @@ public class ShopManager : MonoBehaviour
 {
 
     public int[,] shopItems = new int[5, 5];
-    public float coins;
+    //public float coins;
+    public CoinManager coinManager;
     public TextMeshProUGUI coinsText;
 
     // Start is called before the first frame update
     void Start()
     {
-        coinsText.text = "Coins:" + coins.ToString();
+        coinsText.text = "Coins:" + coinManager.coins.ToString();
 
         //id
         shopItems[1, 1] = 1;
@@ -39,11 +40,11 @@ public class ShopManager : MonoBehaviour
 
     public void Buy() {
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
-        if (coins >= shopItems[2, ButtonRef.GetComponent <ButtonInfo>().itemId]) {
+        if (coinManager.coins >= shopItems[2, ButtonRef.GetComponent <ButtonInfo>().itemId]) {
 
-            coins -= shopItems[2, ButtonRef.GetComponent <ButtonInfo>().itemId];
+            coinManager.coins -= shopItems[2, ButtonRef.GetComponent <ButtonInfo>().itemId];
             shopItems[3, ButtonRef.GetComponent <ButtonInfo>().itemId]++;
-            coinsText.text = "Coins:" + coins.ToString();
+            coinsText.text = "Coins:" + coinManager.coins.ToString();
             ButtonRef.GetComponent<ButtonInfo>().quantityText.text = shopItems[3, ButtonRef.GetComponent<ButtonInfo>().itemId].ToString();
 
         }
