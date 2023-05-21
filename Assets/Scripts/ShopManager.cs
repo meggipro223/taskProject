@@ -24,10 +24,10 @@ public class ShopManager : MonoBehaviour
         shopItems[1, 4] = 4;
 
         //price
-        shopItems[2, 1] = 10;
-        shopItems[2, 2] = 20;
-        shopItems[2, 3] = 30;
-        shopItems[2, 4] = 40;
+        shopItems[2, 1] = 60;
+        shopItems[2, 2] = 70;
+        shopItems[2, 3] = 80;
+        shopItems[2, 4] = 35;
 
         //quantity
         shopItems[3, 1] = 0;
