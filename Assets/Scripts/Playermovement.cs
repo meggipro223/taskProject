@@ -5,17 +5,13 @@ using UnityEngine;
 public class Playermovement : MonoBehaviour
 {
     public float moveSpeed;
-    public GameObject panel;
     public Vector2 lastMove;
-    public float attackingTime;
     public string startPoint;
 
     private Animator anim;
     private Rigidbody2D myBody;
     private bool playerMoving;
     private static bool playerrExist;
-    private bool attacking;
-    private float attackTimeCounter;
 
     // Start is called before the first frame update
     void Start()
