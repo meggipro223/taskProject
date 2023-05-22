@@ -4,15 +4,15 @@ using TMPro;
 
 public class CoinManager : MonoBehaviour
 {
-    public int coins = 100; // Početni broj novčića
-    public TextMeshProUGUI coinText; // Referenca na UI tekst koji prikazuje broj novčića
+    public int coins; 
+    public TextMeshProUGUI coinText; 
 
-    private void Start()
+    private void Update()
     {
         UpdateCoinText();
     }
 
-    private void UpdateCoinText()
+    public void UpdateCoinText()
     {
         coinText.text = "Coins: " + coins.ToString();
     }

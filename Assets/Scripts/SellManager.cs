@@ -22,8 +22,8 @@ public class SellManager : MonoBehaviour
         shopItems[1, 2] = 2;
 
         //price
-        shopItems[2, 1] = 60;
-        shopItems[2, 2] = 70;
+        shopItems[2, 1] = 5;
+        shopItems[2, 2] = 5;
 
         //quantity
         shopItems[3, 1] = 0;
@@ -39,7 +39,7 @@ public class SellManager : MonoBehaviour
         int currentQuantity = shopItems[3, sellItemId];
 
 
-        if (currentQuantity < 2)
+        if (currentQuantity < 1)
         {
 
             coinsManager.coins += shopItems[2, ButtonRef.GetComponent<SellButtonInfo>().sellItemId];

@@ -11,10 +11,11 @@ public class ButtonInfo : MonoBehaviour
     public TextMeshProUGUI quantityText;
     public GameObject shopManager;
     GameObject blueHat, roseHat;
-    GameObject firstSoldier,player;
+    GameObject firstSoldier, player;
     [HideInInspector]
     public Playermovement playerScript;
     public Animator playerAnimator;
+    private CoinManager coinManager;
 
     // Update is called once per frame
     void Update()
@@ -25,43 +26,66 @@ public class ButtonInfo : MonoBehaviour
 
     }
 
-     void Start()
+    void Start()
     {
-         player = GameObject.FindGameObjectWithTag("Player");
+        coinManager = FindObjectOfType<CoinManager>();
+        player = GameObject.FindGameObjectWithTag("Player");
 
         if (player != null)
             playerAnimator = player.GetComponent<Animator>();
 
         blueHat = player.transform.Find("BlueHat").gameObject;
-         roseHat = player.transform.Find("RoseHat").gameObject;
+        roseHat = player.transform.Find("RoseHat").gameObject;
 
         firstSoldier = player.transform.Find("FirstSoldier").gameObject;
     }
 
     public void ActivateBlueHat()
     {
-        
-        blueHat.SetActive(true);
-        roseHat.SetActive(false); 
+        int itemPrice = shopManager.GetComponent<ShopManager>().shopItems[2, itemId];
+        if (coinManager.coins >= itemPrice)
+        {
+
+            coinManager.coins -= itemPrice;
+            coinManager.coinText.text = "Coins:" + coinManager.coins.ToString();
+
+            blueHat.SetActive(true);
+            roseHat.SetActive(false);
+            print("fdsfsdfdf");
+
+        }
     }
 
     public void ActivateRoseHat()
-    {  
-        
-        roseHat.SetActive(true);
-        blueHat.SetActive(false);
+    {
+        int itemPrice = shopManager.GetComponent<ShopManager>().shopItems[2, itemId];
+        if (coinManager.coins >= itemPrice)
+        {
 
-    }
+            coinManager.coins -= itemPrice;
+            coinManager.UpdateCoinText();
+
+            roseHat.SetActive(true);
+            blueHat.SetActive(false);
+            print("fdsfsdfdf");
+        }
+    } 
 
     public void ActivateFirstSoldier()
     {
+        int itemPrice = shopManager.GetComponent<ShopManager>().shopItems[2, itemId];
+        if (coinManager.coins >= itemPrice)
+        {
 
-        firstSoldier.SetActive(true);
-        blueHat.SetActive(false);
-        roseHat.SetActive(false);
-        playerAnimator.enabled = false;
+            coinManager.coins -= itemPrice;
+            coinManager.coinText.text = "Coins:" + coinManager.coins.ToString();
 
-    }
-
+            firstSoldier.SetActive(true);
+            blueHat.SetActive(false);
+            roseHat.SetActive(false);
+            playerAnimator.enabled = false;
+            print("fdsfsdfdf");
+        }
+    } 
 
 }

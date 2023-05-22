@@ -8,7 +8,7 @@ using TMPro;
 public class ShopManager : MonoBehaviour
 {
 
-    public int[,] shopItems = new int[6, 6];
+    public int[,] shopItems = new int[4, 4];
     public CoinManager coinManager;
     public TextMeshProUGUI coinsText;
 
@@ -20,24 +20,24 @@ public class ShopManager : MonoBehaviour
 
         //id
         shopItems[1, 1] = 1;
+        //shopItems[1, 2] = 2;
+        //shopItems[1, 3] = 3;
         shopItems[1, 2] = 2;
         shopItems[1, 3] = 3;
-        shopItems[1, 4] = 4;
-        shopItems[1, 5] = 5;
 
         //price
         shopItems[2, 1] = 60;
-        shopItems[2, 2] = 70;
-        shopItems[2, 3] = 80;
-        shopItems[2, 4] = 35;
-        shopItems[2, 5] = 45;
+        //shopItems[2, 2] = 70;
+       // shopItems[2, 3] = 80;
+        shopItems[2, 2] = 35;
+        shopItems[2, 3] = 45;
 
         //quantity
         shopItems[3, 1] = 0;
+        //shopItems[3, 2] = 0;
+        //shopItems[3, 3] = 0;
         shopItems[3, 2] = 0;
         shopItems[3, 3] = 0;
-        shopItems[3, 4] = 0;
-        shopItems[3, 5] = 0;
 
     }
 
@@ -51,6 +51,8 @@ public class ShopManager : MonoBehaviour
             shopItems[3, ButtonRef.GetComponent <ButtonInfo>().itemId]++;
             coinsText.text = "Coins:" + coinManager.coins.ToString();
             ButtonRef.GetComponent<ButtonInfo>().quantityText.text = shopItems[3, ButtonRef.GetComponent<ButtonInfo>().itemId].ToString();
+            
+            //OVDE TREBA DA ISPISES KOD AKO KLIKNE NA ODREDJENI BUTTON DA SE AKTIVIRA PANEL! PITAJ CHATA KAKO TO DA URADI NA KLIK ID A NE NA EVENT
 
         }
 }
