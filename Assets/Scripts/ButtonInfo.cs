@@ -34,13 +34,11 @@ public class ButtonInfo : MonoBehaviour
         if (player != null)
             playerAnimator = player.GetComponent<Animator>();
 
-        blueHat = player.transform.Find("BlueHat").gameObject;
-        roseHat = player.transform.Find("RoseHat").gameObject;
+      
 
-        firstSoldier = player.transform.Find("FirstSoldier").gameObject;
     }
 
-    public void ActivateBlueHat()
+  /*  public void ActivateBlueHat()
     {
         int itemPrice = shopManager.GetComponent<ShopManager>().shopItems[2, itemId];
         if (coinManager.coins >= itemPrice)
@@ -86,6 +84,6 @@ public class ButtonInfo : MonoBehaviour
             playerAnimator.enabled = false;
             print("fdsfsdfdf");
         }
-    } 
+    }  */
 
 }

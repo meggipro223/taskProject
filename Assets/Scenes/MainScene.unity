@@ -1548,6 +1548,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinManager: {fileID: 1835977428}
   coinsText: {fileID: 2131500870}
+  blueHat: {fileID: 787266969924530580, guid: 5e21097fd888eca49a4ac47bf560e5d9, type: 3}
+  roseHat: {fileID: 9193657065791561460, guid: 83ef1eafe5d04d34a8ec8f77902e54b0, type: 3}
+  firstSoldier: {fileID: 994224461823984003, guid: e8ff8658ad24d354291c6230715b2dab, type: 3}
+  player: {fileID: 9034245031777569103, guid: a9b2ce150ef811e48bd7ffed11334a81, type: 3}
+  ButtonRef: {fileID: 175111693}
+  playerAnimator: {fileID: 9034245031777569145, guid: a9b2ce150ef811e48bd7ffed11334a81, type: 3}
 --- !u!4 &456723834
 Transform:
   m_ObjectHideFlags: 0
@@ -2032,7 +2038,7 @@ GameObject:
   - component: {fileID: 695756401}
   - component: {fileID: 695756404}
   m_Layer: 5
-  m_Name: Item4
+  m_Name: Item2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2108,22 +2114,10 @@ MonoBehaviour:
       - m_Target: {fileID: 456723833}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 695756404}
-        m_TargetAssemblyTypeName: ButtonInfo, Assembly-CSharp
-        m_MethodName: ActivateBlueHat
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 695756398}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2184,7 +2178,7 @@ MonoBehaviour:
   quantityText: {fileID: 78030140}
   shopManager: {fileID: 456723832}
   playerScript: {fileID: 0}
-  playerAnimator: {fileID: 0}
+  playerAnimator: {fileID: 9034245031777569145, guid: a9b2ce150ef811e48bd7ffed11334a81, type: 3}
 --- !u!1 &743284322
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,7 +2193,7 @@ GameObject:
   - component: {fileID: 743284325}
   - component: {fileID: 743284328}
   m_Layer: 5
-  m_Name: Item5
+  m_Name: Item3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2275,22 +2269,10 @@ MonoBehaviour:
       - m_Target: {fileID: 456723833}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 743284328}
-        m_TargetAssemblyTypeName: ButtonInfo, Assembly-CSharp
-        m_MethodName: ActivateRoseHat
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 743284322}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2351,7 +2333,7 @@ MonoBehaviour:
   quantityText: {fileID: 1193346557}
   shopManager: {fileID: 456723832}
   playerScript: {fileID: 0}
-  playerAnimator: {fileID: 0}
+  playerAnimator: {fileID: 9034245031777569145, guid: a9b2ce150ef811e48bd7ffed11334a81, type: 3}
 --- !u!1 &753019275
 GameObject:
   m_ObjectHideFlags: 0
@@ -4286,7 +4268,7 @@ MonoBehaviour:
   quantityText: {fileID: 1845192815}
   shopManager: {fileID: 456723832}
   playerScript: {fileID: 0}
-  playerAnimator: {fileID: 1768282267447612521, guid: 799be44a93cd4f94d871df49ed514fbd, type: 3}
+  playerAnimator: {fileID: 9034245031777569145, guid: a9b2ce150ef811e48bd7ffed11334a81, type: 3}
 --- !u!114 &1482612977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4334,22 +4316,10 @@ MonoBehaviour:
       - m_Target: {fileID: 456723833}
         m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
         m_MethodName: Buy
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1482612976}
-        m_TargetAssemblyTypeName: ButtonInfo, Assembly-CSharp
-        m_MethodName: ActivateFirstSoldier
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1482612974}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6053,7 +6023,7 @@ PrefabInstance:
     - target: {fileID: 8163196611759762076, guid: c9262c8216f9320468cf8a6160d2e243, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4300000, guid: db471c607fcc0be42972242fc5e1a5c2, type: 3}
+      objectReference: {fileID: 4300000, guid: 79d596caa3ddf2643a4a4182dbaa9aa0, type: 3}
     - target: {fileID: 8163196612111556664, guid: c9262c8216f9320468cf8a6160d2e243, type: 3}
       propertyPath: m_Mesh
       value: 
