@@ -395,6 +395,8 @@ MonoBehaviour:
   priceText: {fileID: 1826720833}
   quantityText: {fileID: 2037159787}
   shopManager: {fileID: 456723832}
+  playerScript: {fileID: 0}
+  playerAnimator: {fileID: 0}
 --- !u!114 &104914142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2000,6 +2002,8 @@ MonoBehaviour:
   priceText: {fileID: 549635313}
   quantityText: {fileID: 1075984546}
   shopManager: {fileID: 456723832}
+  playerScript: {fileID: 0}
+  playerAnimator: {fileID: 0}
 --- !u!114 &551838251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2726,6 +2730,8 @@ MonoBehaviour:
   priceText: {fileID: 1278944361}
   quantityText: {fileID: 78030140}
   shopManager: {fileID: 456723832}
+  playerScript: {fileID: 0}
+  playerAnimator: {fileID: 0}
 --- !u!1 &743284322
 GameObject:
   m_ObjectHideFlags: 0
@@ -2891,6 +2897,8 @@ MonoBehaviour:
   priceText: {fileID: 930548244}
   quantityText: {fileID: 1193346557}
   shopManager: {fileID: 456723832}
+  playerScript: {fileID: 0}
+  playerAnimator: {fileID: 0}
 --- !u!1 &753019275
 GameObject:
   m_ObjectHideFlags: 0
@@ -4959,6 +4967,8 @@ MonoBehaviour:
   priceText: {fileID: 1529363587}
   quantityText: {fileID: 1845192815}
   shopManager: {fileID: 456723832}
+  playerScript: {fileID: 0}
+  playerAnimator: {fileID: 1768282267447612521, guid: 799be44a93cd4f94d871df49ed514fbd, type: 3}
 --- !u!114 &1482612977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6936,12 +6946,13 @@ PrefabInstance:
     - target: {fileID: 8163196611759762076, guid: c9262c8216f9320468cf8a6160d2e243, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 4300000, guid: 79d596caa3ddf2643a4a4182dbaa9aa0, type: 3}
+      objectReference: {fileID: 4300000, guid: db471c607fcc0be42972242fc5e1a5c2, type: 3}
     - target: {fileID: 8163196612111556664, guid: c9262c8216f9320468cf8a6160d2e243, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 4300000, guid: 5ab944af01626ac48bb9f8c525989193, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8163196610460325451, guid: c9262c8216f9320468cf8a6160d2e243, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c9262c8216f9320468cf8a6160d2e243, type: 3}
 --- !u!1 &2035076778
 GameObject:

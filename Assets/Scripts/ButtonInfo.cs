@@ -11,8 +11,10 @@ public class ButtonInfo : MonoBehaviour
     public TextMeshProUGUI quantityText;
     public GameObject shopManager;
     GameObject blueHat, roseHat;
-    GameObject firstSoldier, secondSoldier, thirdSoldier;
-
+    GameObject firstSoldier,player;
+    [HideInInspector]
+    public Playermovement playerScript;
+    public Animator playerAnimator;
 
     // Update is called once per frame
     void Update()
@@ -25,9 +27,12 @@ public class ButtonInfo : MonoBehaviour
 
      void Start()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+         player = GameObject.FindGameObjectWithTag("Player");
 
-         blueHat = player.transform.Find("BlueHat").gameObject;
+        if (player != null)
+            playerAnimator = player.GetComponent<Animator>();
+
+        blueHat = player.transform.Find("BlueHat").gameObject;
          roseHat = player.transform.Find("RoseHat").gameObject;
 
         firstSoldier = player.transform.Find("FirstSoldier").gameObject;
@@ -54,6 +59,7 @@ public class ButtonInfo : MonoBehaviour
         firstSoldier.SetActive(true);
         blueHat.SetActive(false);
         roseHat.SetActive(false);
+        playerAnimator.enabled = false;
 
     }
 
