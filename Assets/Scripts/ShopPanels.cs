@@ -15,7 +15,6 @@ public class ShopPanels : MonoBehaviour
     [SerializeField]
     private GameObject sellPanel;
 
-    // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<Playermovement>();

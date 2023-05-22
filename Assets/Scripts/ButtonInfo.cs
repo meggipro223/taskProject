@@ -38,52 +38,5 @@ public class ButtonInfo : MonoBehaviour
 
     }
 
-  /*  public void ActivateBlueHat()
-    {
-        int itemPrice = shopManager.GetComponent<ShopManager>().shopItems[2, itemId];
-        if (coinManager.coins >= itemPrice)
-        {
-
-            coinManager.coins -= itemPrice;
-            coinManager.coinText.text = "Coins:" + coinManager.coins.ToString();
-
-            blueHat.SetActive(true);
-            roseHat.SetActive(false);
-            print("fdsfsdfdf");
-
-        }
-    }
-
-    public void ActivateRoseHat()
-    {
-        int itemPrice = shopManager.GetComponent<ShopManager>().shopItems[2, itemId];
-        if (coinManager.coins >= itemPrice)
-        {
-
-            coinManager.coins -= itemPrice;
-            coinManager.UpdateCoinText();
-
-            roseHat.SetActive(true);
-            blueHat.SetActive(false);
-            print("fdsfsdfdf");
-        }
-    } 
-
-    public void ActivateFirstSoldier()
-    {
-        int itemPrice = shopManager.GetComponent<ShopManager>().shopItems[2, itemId];
-        if (coinManager.coins >= itemPrice)
-        {
-
-            coinManager.coins -= itemPrice;
-            coinManager.coinText.text = "Coins:" + coinManager.coins.ToString();
-
-            firstSoldier.SetActive(true);
-            blueHat.SetActive(false);
-            roseHat.SetActive(false);
-            playerAnimator.enabled = false;
-            print("fdsfsdfdf");
-        }
-    }  */
 
 }

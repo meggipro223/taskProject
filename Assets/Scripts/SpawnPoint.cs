@@ -9,7 +9,6 @@ public class SpawnPoint : MonoBehaviour
     public Vector2 startDirection;
     public string point;
 
-    // Start is called before the first frame update
     void Start()
     {
 

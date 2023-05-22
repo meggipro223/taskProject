@@ -172,17 +172,14 @@ public class ShopManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
-      /*  blueHat.GetComponent<Button>().onClick.AddListener(() => Buy(blueHat));
-        roseHat.GetComponent<Button>().onClick.AddListener(() => Buy(roseHat));
-        firstSoldier.GetComponent<Button>().onClick.AddListener(() => Buy(firstSoldier)); */
+   
 
         GameObject coinManagerObject = GameObject.Find("CoinManager");
 
-        // Provjera postoji li CoinManager objekt u sceni
+       
         if (coinManagerObject != null)
         {
-            // Dohvaćanje referencu na CoinManager komponentu
+           
             coinManager = coinManagerObject.GetComponent<CoinManager>();
         }
         else

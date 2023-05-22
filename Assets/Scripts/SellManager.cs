@@ -8,13 +8,11 @@ public class SellManager : MonoBehaviour
 {
     public int[,] shopItems = new int[5, 5];
     public TextMeshProUGUI coinsText;
-    //public ShopManager shopManagerIntance;
     public CoinManager coinsManager;
 
     // Start is called before the first frame update
     void Start()
     {
-       // shopManagerIntance = GetComponent<ShopManager>();
         coinsText.text = "Coins:" + coinsManager.coins.ToString();
 
         //id
