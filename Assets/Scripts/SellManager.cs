@@ -34,14 +34,13 @@ public class SellManager : MonoBehaviour
     public void Sell()
     {
         GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
-        if (coinsManager.coins >= shopItems[2, ButtonRef.GetComponent<SellButtonInfo>().sellItemId])
-        {
+        
 
             coinsManager.coins += shopItems[2, ButtonRef.GetComponent<SellButtonInfo>().sellItemId];
             shopItems[3, ButtonRef.GetComponent<SellButtonInfo>().sellItemId]++;
             coinsText.text = "Coins:" + coinsManager.coins.ToString();
             ButtonRef.GetComponent<SellButtonInfo>().quantityText.text = shopItems[3, ButtonRef.GetComponent<SellButtonInfo>().sellItemId].ToString();
 
-        }
+        
     }
 }

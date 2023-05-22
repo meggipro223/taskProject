@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,16 +8,20 @@ public class Playermovement : MonoBehaviour
     public Vector2 lastMove;
     public string startPoint;
 
-    private Animator anim;
+    [HideInInspector]
+    public Animator anim;
+
     private Rigidbody2D myBody;
     private bool playerMoving;
     private static bool playerrExist;
+
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         myBody = GetComponent<Rigidbody2D>();
+
 
         if (!playerrExist)
         {
@@ -72,5 +76,6 @@ public class Playermovement : MonoBehaviour
         anim.SetFloat("LastMoveX", lastMove.x);
         anim.SetFloat("LastMoveY", lastMove.y);
     }
+
 }
 

@@ -15,15 +15,11 @@ public class ShopPanels : MonoBehaviour
     [SerializeField]
     private GameObject sellPanel;
 
-    [SerializeField]
-    private Sprite noviSprite;
-
     // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<Playermovement>();
         
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,9 +28,6 @@ public class ShopPanels : MonoBehaviour
         {
             talkPanel.SetActive(true);
             Time.timeScale = 0f;
-
-            SpriteRenderer playerRenderer = player.GetComponent<SpriteRenderer>();
-            playerRenderer.sprite = noviSprite;
         }
     }
 
