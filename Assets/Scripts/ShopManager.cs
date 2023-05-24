@@ -269,4 +269,9 @@ public class ShopManager : MonoBehaviour
             print("soldier");
         
     }
+
+    public void QuitBtn()
+    {
+        Application.Quit();
+    }
 }

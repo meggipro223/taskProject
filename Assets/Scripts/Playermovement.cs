@@ -77,5 +77,7 @@ public class Playermovement : MonoBehaviour
         anim.SetFloat("LastMoveY", lastMove.y);
     }
 
+  
+
 }
 

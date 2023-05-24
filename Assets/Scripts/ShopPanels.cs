@@ -15,6 +15,9 @@ public class ShopPanels : MonoBehaviour
     [SerializeField]
     private GameObject sellPanel;
 
+    [SerializeField]
+    private GameObject quitButton;
+
     void Start()
     {
         player = FindObjectOfType<Playermovement>();
@@ -25,7 +28,9 @@ public class ShopPanels : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
+           
             talkPanel.SetActive(true);
+            quitButton.SetActive(false);
             Time.timeScale = 0f;
         }
     }
@@ -33,18 +38,21 @@ public class ShopPanels : MonoBehaviour
     public void ExitBtnForTalkPanel()
     {
         talkPanel.SetActive(false);
+        quitButton.SetActive(true);
         Time.timeScale = 1f;
     }
 
     public void ExitBtnForBuyPanel()
     {
         buyPanel.SetActive(false);
+        quitButton.SetActive(true);
         Time.timeScale = 1f;
     }
 
     public void ExitBtnForSellPanel()
     {
         sellPanel.SetActive(false);
+        quitButton.SetActive(true);
         Time.timeScale = 1f;
     }
 
